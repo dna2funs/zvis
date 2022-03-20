@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head>
+<title>ZVIS</title>
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link type="text/css" rel="stylesheet" href="index.css" />
+<link type="text/css" rel="stylesheet" href="handsontable.full.css" />
+</head><body>
+<div id="editor"></div>
+<div id="toolbar">
+   <div class="btn-fold">
+      <button class="fold-open" id="btn-toolbar-fold">&gt;</button>
+   </div>
+   <div class="content" id="pnl-toolbar-content">
+      <div>
+      <button id="btn-save">Save</button>
+      <button id="btn-load">Load</button>
+      </div>
+      <div>
+      <button id="btn-add-node">Add Node</button>
+      </div>
+      <div>
+      <button id="btn-add-edge">Add Edge</button>
+      </div>
+      <div id="pnl-selected">
+      <div>
+         <button id="btn-update">Update</button>
+      </div>
+      <div id="tbl-property"></div>
+      </div>
+   </div>
+</div>
+<script src="vis-network.js"></script>
+<script src="handsontable.full.js"></script>
+<script src="index.js"></script>
+</body></html>
