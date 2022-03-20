@@ -5,7 +5,7 @@
  * A dynamic, browser-based visualization library.
  *
  * @version 0.0.0-no-version
- * @date    2022-03-19T21:25:57.519Z
+ * @date    2022-03-18T21:42:01.207Z
  *
  * @copyright (c) 2011-2017 Almende B.V, http://almende.com
  * @copyright (c) 2017-2019 visjs contributors, https://github.com/visjs
@@ -18416,7 +18416,12 @@
 	        throw new Error("Cannot update item: no item with id " + id + " found");
 	      }
 
-	      this._data.set(id, _objectSpread$4(_objectSpread$4({}, item), update));
+         var updated = _objectSpread$4(_objectSpread$4({}, item), update);
+         Object.keys(updated).forEach(function (key) {
+            var val = updated[key];
+            if (val === null || val === undefined) delete updated[key];
+         });
+	      this._data.set(id, updated);
 
 	      return id;
 	    }
