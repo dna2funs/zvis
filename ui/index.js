@@ -37,8 +37,8 @@ function ajax(options) {
 
 var constant = {
    regex: {
-      integer: /[0-9]+/,
-      float: /[0-9]*\.[0-9]+/ // not support sth like 1e-3
+      integer: /^[0-9]+$/,
+      float: /^[0-9]*\.[0-9]+$/ // not support sth like 1e-3
    }
 };
 
