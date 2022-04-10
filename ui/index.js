@@ -152,7 +152,7 @@ function events() {
       ui.toolbar.btn_add_edge.innerHTML = 'Add Edge';
       ctrl.state.toolbar.adding.edge = false;
    });
-   on(window, 'keypress', function deleteNode(evt) {
+   on(window, 'keyup', function deleteNode(evt) {
       switch (evt.key) {
       case 'Delete':
          editorDeleteSelectedNode();

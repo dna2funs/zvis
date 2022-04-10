@@ -18419,7 +18419,7 @@
          var updated = _objectSpread$4(_objectSpread$4({}, item), update);
          Object.keys(updated).forEach(function (key) {
             var val = updated[key];
-            if (val === null || val === undefined) delete updated[key];
+            if (val === null || val === undefined || !key) delete updated[key];
          });
 	      this._data.set(id, updated);
 
